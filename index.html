@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOLETINS</title>
+    <!--LINK DO BOOTSTRAP -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <!--LINK DO JQUERY-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--LINK DO STYLE.CSS-->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <div class="container">
+        
+        <!---->
+        <center>
+            <h2 class="page-header">BOLETINS DOS ALUNOS</h2>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box1">
+                
+        </center> 
+
+        <div class="dados">
+             
+              <h3> Digite o nome 
+                <input type="text" id="nome" /></h3>
+        
+                <h4> Qual o total de projetos ? <input type="number" id="pTotal"> </h4>
+                <h4> Qual o total de projetos concluídos? <input type="number" id="pConcluido" aria-valuenow="0"> </h4>
+                <h4> Qual o total de projetos avaliados? <input type="number" id="pAvaliado" aria-valuenow="0"> </h4>
+                <h4> Qual o total de questionários feitos? <input type="number" id="qFeito" aria-valuenow="0"> </h4>
+                 
+
+                <button class="btn btn-success " id='send'>ENVIAR</button> <br>
+
+        </div>       
+              
+
+            </div>  
+            <center>
+            <div class="result col-lg-8 col-md-8 col-sm-9 col-xs-9" >
+                <h4>BOLETIM</h4>
+                <div>
+                  <h3>Lógica: <span id="logNota"></span> </h3>
+                  <h3 class="c" id="logComent"></h3> <button class="btn btn-info" id="copy" onclick="CopyTexto('logComent')"> COPIAR </button>
+                </div>
+                <div>
+                <h3>Criatividade: <span id="criNota"></span> </h3>
+                <h3  class="c" id="criComent"></h3> <button class="btn btn-info" id="copy" onclick="CopyTexto('criComent')"> COPIAR </button>
+                </div>
+                <div>
+                <h3>Fluência de Programação: <span id="fluNota"></span> </h3>
+                <h3 class="c" id="fluComent"></h3> <button class="btn btn-info" id="copy" onclick="CopyTexto('fluComent')"> COPIAR </button>
+              </div>
+                <div>
+                <h3>Perserverança: <span id="perNota"></span> </h3>
+                <h3 class="c" id="perComent"></h3><button class="btn btn-info" id="copy" onclick="CopyTexto('perComent')"> COPIAR </button>
+              </div>
+                <div>
+                <h3>Mentalidade de Crescimento: <span id="menNota"></span> </h3>
+                <h3 class="c" id="menComent"></h3><button class="btn btn-info" id="copy" onclick="CopyTexto('menComent')"> COPIAR </button>
+              </div>
+                <div>
+                <h3>Satisfação Adiada: <span id="satNota"></span> </h3>
+                <h3 class="c" id="satComent"></h3><button class="btn btn-info" id="copy" onclick="CopyTexto('satComent')"> COPIAR </button>
+              </div>
+                <div>
+                <h3>Comentário Final: </h3>
+                <h3 class="c" id="finalComent"></h3><button class="btn btn-info" id="copy"  onclick="CopyTexto('finalComent')"> COPIAR </button>
+              </div>
+            </div>
+      </center>
+        
+
+
+    </div>
+    <script src='code.js'></script>
+  </body>
+</html>
