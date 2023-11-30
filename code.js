@@ -159,7 +159,7 @@ $("#send").click(()=>{
 })
 
 
-function CopyTexto(id){
+function CopyTexto(id, idbtn){
     var r = document.createRange();
     r.selectNode(document.getElementById(id));
     window.getSelection().removeAllRanges();
@@ -168,9 +168,9 @@ function CopyTexto(id){
         document.execCommand('copy');
         window.getSelection().removeAllRanges();
         console.log('Texto copiado com sucesso. ' + r);
-        $("#copy").text("Copiado com sucesso!");
-        $("#copy").removeClass("btn-info");
-        $("#copy").addClass("btn-success");
+        $("#"+idbtn).text("Copiado com sucesso!");
+        $("#"+idbtn).removeClass("btn-info");
+        $("#"+idbtn).addClass("btn-success");
 
     } catch (err) {
         alert('Não foi possível copiar!');
