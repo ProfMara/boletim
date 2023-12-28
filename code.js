@@ -8,6 +8,10 @@ var nSat = 100;
 var nPer = 100;
 
 $("#send").click(()=>{
+    $(".btn-success").text("COPIAR");
+    $(".btn-success").addClass("btn-info");
+    $(".btn-success").removeClass("btn-success");
+    
     var nome = '';
 
     var nLog = 51;
@@ -55,7 +59,7 @@ $("#send").click(()=>{
         
 
     }else if(nLog >= 75){
-        texto = nome + " tem grande potencial na área de programação e para atingí-lo, precisa desenvolver mais seu raciocínio lógico se dedicando nos questionários e nas aulas.        "
+        texto = nome + " tem grande potencial na área e para atingí-lo, precisa desenvolver mais seu raciocínio lógico se dedicando nos questionários."
         $("#logComent").text(texto)
 
     }else {
@@ -68,7 +72,7 @@ $("#send").click(()=>{
         $("#criComent").text(texto)
         
     }else if(nCri > 60){
-        texto = nome + " tem grande potencial criativo para produzir jogos e animações originais com o que aprendeu em aula, mas precisa praticar mais e expressar mais suas ideias."
+        texto = nome + " tem grande potencial criativo para fazer suas próprias criações com o que aprendeu, mas precisa expressar mais suas ideias."
         $("#criComent").text(texto)
 
     }else {
@@ -174,7 +178,6 @@ function CopyTexto(id, idbtn){
 
     } catch (err) {
         alert('Não foi possível copiar!');
-        
     }
 
 }
